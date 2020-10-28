@@ -1,22 +1,22 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
+  position: relative;
+  
+  
   div.content{
     position: relative;
     z-index: 5;
-    width: 320px;
+    width: 350px;
     height: 180px;
     margin-right: 5px;
     background: #242424;
-    transition: all 0.3s;
-
-
+    transition: all 0.4s;
+    
     &:hover{
       z-index: 10;
       width: 400px;
       height: 320px;
-      transform: translateX(10px);
-
     }
 
     &:hover > img {
@@ -31,6 +31,13 @@ export const Container = styled.div`
         width: 100%;
         height: 180px;
         border-radius: 10px;
+
+        &:nth-child(6)::after{
+          content: "";
+          height: 20px;
+          width: 20px;
+          background: #151515;
+        }
     
     }
       

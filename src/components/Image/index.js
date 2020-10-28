@@ -40,8 +40,8 @@ function Image({ image }) {
             <p><b>T1:E1</b>"Primeiro Episodio"</p>
         </div>
         )}
-      </div>
-      
+      </div>  
+
     </Container>
   );
 }

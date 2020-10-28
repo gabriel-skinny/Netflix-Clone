@@ -8,6 +8,8 @@ function Header() {
   const headerRef = useRef(null)
   const [ menuHovered, setMenuHovered] = useState(false)
 
+  var clicked = false;
+
   useEffect(() => {
     window.addEventListener("scroll", function(){
       const scroll = window.scrollY;
@@ -21,12 +23,10 @@ function Header() {
 
   },[])
 
-  function hoverMenu(){
-    setMenuHovered(true)
-  }
-
-  function unHoverMenu(){
-    setMenuHovered(false)
+  function clickedMenu(){
+    clicked = clicked ? clicked = false : clicked = true;
+    
+    setMenuHovered(clicked);
   }
   
   return (
@@ -48,12 +48,12 @@ function Header() {
           <li>INFANTIL</li>
           <li><FaGift size={20}/></li>
           <li><FaBell size={20}/></li>
-          <li onMouseEnter={hoverMenu} onMouseLeave={unHoverMenu}>
+          <li onClick={clickedMenu}>
             <div className="profile"></div>
             <FaSortDown />
           </li>
           {menuHovered && (
-            <Detail onMouseEnter={hoverMenu} onMouseLeave={unHoverMenu}>
+            <Detail>
             <FaSortUp size={30} />
             
             <div className="top">
