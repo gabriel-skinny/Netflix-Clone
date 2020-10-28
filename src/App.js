@@ -3,6 +3,7 @@ import GlobalStyle from "./style/globalStyle";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import List from "./components/List";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <List title="Assistir novamente"/>
       <List title="Top 10 de hoje no Brasil"/>
       <List title="Comédia com drama"/>
+      <Footer />
     </>
   );
 }

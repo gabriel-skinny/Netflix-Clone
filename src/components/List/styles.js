@@ -7,7 +7,7 @@ export const Container = styled.div`
   margin-bottom: 40px;
   overflow: hidden;
   z-index: 5;
-  
+
 
   h1{
     font-size: 25px;
